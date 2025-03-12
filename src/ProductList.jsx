@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './ProductList.css'
 import CartItem from './CartItem';
+import { useDispatch } from 'react-redux';
 import { addItem, removeItem, updateQuantity } from './CartSlice';
 function ProductList({ onHomeClick }) {
     const [showCart, setShowCart] = useState(false);
@@ -233,6 +234,7 @@ function ProductList({ onHomeClick }) {
         fontSize: '30px',
         textDecoration: 'none',
     }
+    
 
     const handleHomeClick = (e) => {
         e.preventDefault();
@@ -255,6 +257,7 @@ function ProductList({ onHomeClick }) {
     };
 
     const [addedToCart, setAddedToCart] = useState({});
+    const dispatch = useDispatch();
 
     const handleAddToCart = (product) => {
         dispatch(addItem(product));
