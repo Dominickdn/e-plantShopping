@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite build; vite preview --host"
+    "preview": "vite build; vite preview --host",
+    "predeploy": "vite build", 
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.3",
@@ -25,5 +27,6 @@
     "eslint-plugin-react-refresh": "^0.4.6",
     "gh-pages": "^6.1.1",
     "vite": "^5.2.0"
-  }
+  },
+  "homepage": "https://dominickdn.github.io/e-plantShopping"
 }
